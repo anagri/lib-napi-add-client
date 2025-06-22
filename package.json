@@ -12,7 +12,7 @@
     "test:safe": "vitest run --config=vitest.config.safe.js"
   },
   "dependencies": {
-    "lib-embed-distance": "^0.1.0",
+    "lib-embed-distance": "^0.1.1",
     "lib-napi-add": "^1.1.1"
   },
   "devDependencies": {
