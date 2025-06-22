@@ -11,10 +11,11 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "lib-embed-distance": "^0.1.0",
     "lib-napi-add": "^1.1.1"
   },
   "devDependencies": {
-    "vitest": "^1.0.0",
-    "@vitest/coverage-v8": "^1.0.0"
+    "@vitest/coverage-v8": "^1.0.0",
+    "vitest": "^1.0.0"
   }
 }

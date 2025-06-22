@@ -1,4 +1,5 @@
 import { plus100 } from 'lib-napi-add';
+import { plus100 as plus100_2 } from 'lib-embed-distance';
 
 /**
  * Takes an argument, passes it to plus_100, multiplies by 2 and returns result
@@ -10,4 +11,9 @@ function processNumber(arg) {
   return result * 2;
 }
 
-export { processNumber };
+function processNumber2(arg) {
+  const result = plus100_2(arg);
+  return result * 2;
+}
+
+export { processNumber, processNumber2 };
