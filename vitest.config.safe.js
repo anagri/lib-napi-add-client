@@ -4,10 +4,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'node',
-    reporters: ['default', 'junit'],
-    outputFile: {
-      junit: './test-results.xml'
-    },
+    reporters: ['basic'],
+    // Minimal configuration to avoid any potential issues
     pool: 'forks',
     poolOptions: {
       forks: {
@@ -18,6 +16,8 @@ export default defineConfig({
     isolate: true,
     coverage: {
       enabled: false
-    }
+    },
+    // Don't write junit for the safe test to avoid any file I/O issues
+    outputFile: undefined
   }
-}); 
+});

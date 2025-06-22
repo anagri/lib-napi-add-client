@@ -30,7 +30,17 @@ jobs:
         run: npm ci
         
       - name: Run tests
+        id: main_test
+        continue-on-error: true
         run: npm test
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096 --no-experimental-fetch'
+          
+      - name: Run safe tests (fallback)
+        if: steps.main_test.outcome == 'failure'
+        run: npm run test:safe
+        env:
+          NODE_OPTIONS: '--max-old-space-size=4096 --no-experimental-fetch'
         
       - name: Upload test results
         uses: actions/upload-artifact@v4

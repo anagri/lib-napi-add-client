@@ -8,7 +8,8 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:safe": "vitest run --config=vitest.config.safe.js"
   },
   "dependencies": {
     "lib-embed-distance": "^0.1.0",
